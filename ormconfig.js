@@ -1,19 +1,19 @@
-{
+module.exports = {
    "type": "mysql",
-   "host": "localhost",
+   "host": process.env.HOST,
    "port": 3306,
-   "username": "agora_api",
-   "password": "agora",
-   "database": "agora",
+   "username": process.env.DB_USER,
+   "password": process.env.DB_PASSWORD,
+   "database": process.env.DB_NAME,
    "logging": true,
    "entities": [
-      "build/entity/*.js"
+      "dist/entity/*.js"
    ],
    "migrations": [
-      "build/migration/*.js"
+      "dist/migration/*.js"
    ],
    "subscribers": [
-      "build/subscriber/*.js"
+      "dist/subscriber/*.js"
    ],
    "cli": {
       "entitiesDir": "src/entity",

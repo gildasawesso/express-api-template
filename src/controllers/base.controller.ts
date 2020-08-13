@@ -6,8 +6,10 @@ import {
   Put,
   Delete,
   Patch,
+  CurrentUser
 } from "routing-controllers";
 import { getRepository, Repository, ObjectLiteral } from "typeorm";
+import { User } from "../entity/User";
 
 export abstract class BaseController {
 
